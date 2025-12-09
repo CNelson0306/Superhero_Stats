@@ -1,0 +1,29 @@
+<!-- This template will display a list of Superheroes, each hero 
+links to their own detail page-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Superhero Stats</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <h1>Superhero Stats!</h1>
+
+    <p class="intro-text">Select a hero to view their details:</p>
+
+    <ul class="hero-list">
+      <!-- Loop through superheroes -->
+      {% for hero in heroes %}
+      <li>
+        <!-- Click each hero to view details -->
+        <a href="{{ url_for('hero_page', hero_id=hero.id) }}">
+          {{ hero.name }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

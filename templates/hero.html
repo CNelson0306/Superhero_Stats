@@ -1,0 +1,45 @@
+<!-- This template will display information about a selected superhero. 
+ Includes image-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ hero.name }}</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <h1>{{ hero.name }}</h1>
+
+    <!-- If there is an image of the superhero, show it on screen. -->
+    {% if hero_image_url %}
+    <img src="{{ hero_image_url }}" alt="{{ hero.name }}" class="hero-img" />
+    {% else %}
+    <p>No image available for this hero.</p>
+    {% endif %}
+
+    <h2>Appearance</h2>
+    <ul>
+      <!-- Using .get() to avoid crashing if a value doesn't exist -->
+      <li>
+        <strong>Gender:</strong> {{ hero.appearance.get('gender', 'Unknown') }}
+      </li>
+      <li>
+        <strong>Race:</strong> {{ hero.appearance.get('race', 'Unknown') }}
+      </li>
+      <li><strong>Height:</strong> {{ hero.appearance.get('height', []) }}</li>
+      <li><strong>Weight:</strong> {{ hero.appearance.get('weight', []) }}</li>
+      <li>
+        <strong>Eye Colour:</strong> {{ hero.appearance.get('eye-color',
+        'Unknown') }}
+      </li>
+      <li>
+        <strong>Hair Colour:</strong> {{ hero.appearance.get('hair-color',
+        'Unknown') }}
+      </li>
+    </ul>
+
+    <p><a class="back-link" href="/">← Back to list</a></p>
+  </body>
+</html>

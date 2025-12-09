@@ -1,0 +1,44 @@
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+ENV/
+env/
+
+# ---- Environment Variables / Secrets ----
+.env
+*.env
+
+# ---- Flask / Temp Files ----
+instance/
+.flask_session/
+*.db
+
+# ---- IDE / Editor ----
+.vscode/
+.idea/
+
+# ---- MacOS system files ----
+.DS_Store
+
+# ---- Local cache ----
+*.cache
+.cache/
+
+# ---- Images downloaded by your app ----
+static/hero_images/
+
+# ---- Byte-compiled / Packaging ----
+build/
+dist/
+*.egg-info/
+
+# ---- Logs ----
+*.log
