@@ -6,10 +6,12 @@ Akabab API for hero images (Superhero API blocking images in all browsers?)
 
 import os
 from flask import Flask, render_template
+from flask_cors import CORS
 import requests
 from superhero_api import get_all_heroes, get_hero
 
 app = Flask(__name__)
+CORS(app)
 
 # Load Akabab image metadata once at startup 
 AKABAB_URL = "https://akabab.github.io/superhero-api/api/all.json"
