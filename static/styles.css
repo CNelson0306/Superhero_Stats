@@ -158,3 +158,10 @@ a:hover {
     max-width: 200px;
   }
 }
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-size: cover;
+  }
+}

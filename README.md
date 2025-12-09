@@ -1,6 +1,6 @@
 ## I created and run this project using VS Code
 
-# Superhero Browser using Python + Flask
+# Superhero Stats Application using Python + Flask
 
 # Features
 
